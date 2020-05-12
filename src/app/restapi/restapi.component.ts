@@ -39,7 +39,7 @@ export class RestApiComponent implements OnInit {
         const token = session.getIdToken().getJwtToken();        
         const headers = new Headers();
         headers.append('Authorization', token);        
-        this.http.get('put your api gateway endpoint here', { headers: headers })
+        this.http.get('https://3i5gunhgcg.execute-api.eu-central-1.amazonaws.com/prod', { headers: headers })
           .subscribe(
           response => {           
             that._data = response.json();
